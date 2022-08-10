@@ -1,0 +1,1 @@
+./exec admin.peers|grep remoteAddress|awk '{print $2}'|awk -F: '{print $1}'|sed 's/\"//g'|awk '{print "ipinfo.io/" $1 "?token=d6ce88cf3bd00a &"}'|xargs curl -s|grep city|sort|uniq -c|sort -nr
