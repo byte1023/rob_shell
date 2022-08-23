@@ -1,3 +1,3 @@
-./exec eth.syncing &
-./exec txpool.status &
+./exec eth.syncing &&
+./exec txpool.status &&
 ./exec admin.peers.length
