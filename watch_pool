@@ -1,0 +1,2 @@
+#watch -n1 date +%H:%M:%S.%N \&\& ./exec "txpool.inspect.pending|grep wei|awk -va=1000000000 -vOFS=\"\t\" '\$9/a> 5 {print \$9/a,\$9,\$0}'|sort -rnk 2"
+watch -n1 date +%H:%M:%S.%N \&\& ./exec "txpool.inspect.pending|grep wei|awk -va=1000000000 -vOFS=\"\t\" '{print \$9/a,\$9,\$0}'|sort -rnk 2"

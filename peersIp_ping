@@ -1,0 +1,1 @@
+./peersIp |fping -C1|sort -nk 6
